@@ -1,0 +1,101 @@
+/* Стили для таблицы */
+.table {
+     width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: separate; /* Используем separate, чтобы закругления углов сработали */
+    border-spacing: 0; /* Убираем промежутки между ячейками */
+    border-radius: 10px; /* Закругляем углы таблицы */
+    border: 1px solid #dee2e6; /* Добавляем легкую обводку для таблицы */
+}
+
+/* Скрытие границ между строками таблицы */
+.table tbody tr td {
+    border-top: none !important; /* Убираем разделительные линии с помощью !important */
+}
+
+
+
+.table th, .table td {
+    border: none; /* Убираем все границы */
+    padding: 1rem;
+}
+
+/* Закругление для верхних углов заголовков */
+.table thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Закругление для нижних углов последней строки */
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+
+
+/* Центрируем содержимое в столбце со статусом */
+.table td:first-child {
+    text-align: center;
+    width: 100px; /* Регулируем ширину ячейки статуса */
+}
+
+/* Стили для заголовков таблицы */
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #3F3F3F;
+    border-bottom: 1px solid #dee2e6; /* Оставляем только нижнюю границу для заголовков */
+}
+
+/* Стили для строки */
+.table tbody tr {
+    transition: background-color 0.3s ease;
+     border-bottom: none !important;
+}
+
+
+/* Настройка переключателя */
+.form-check.form-switch {
+    display: flex;
+    justify-content: center;
+}
+
+/* Устанавливаем фиксированную ширину для ячейки статуса */
+.table td:first-child {
+    width: 100px; /* Задаем нужную ширину (например, 100px) */
+    text-align: center; /* Центрируем содержимое */
+    justify-content: center;
+}
+
+/* Настройка кнопки редактирования */
+.dropdown .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+/* Стили для кнопки действий */
+.btn-light {
+    background-color: transparent; /* Убираем фон */
+    border: none; /* Убираем границу */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    box-shadow: none; /* Убираем тень */
+}
+
+/* Стили для изображения внутри кнопки */
+.btn-light img {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+    display: block; /* Убираем любые отступы вокруг изображения */
+}

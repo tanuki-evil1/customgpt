@@ -1,0 +1,7 @@
+repos:
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.6.9  # укажите актуальную версию ruff
+    hooks:
+      - id: ruff
+        args: ["--fix"]  # автоматически исправлять ошибки, если возможно
+      - id: ruff-format

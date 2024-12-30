@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+<!-- Sidebar -->
+{% include 'sidebar.html' %}
+<!-- /#sidebar-wrapper -->
+
+<!-- Page Content -->
+<div id="page-content-wrapper" class="flex-grow-1 p-4">
+    <div class="container">
+        <h2 class="display-4">Инструкция по созданию бота</h2>
+        <p class="lead">CustomGPT помогает вашему бизнесу автоматизировать обработку сообщений от клиентов <br> в популярных мессенджерах и соцсетях.</p>
+
+
+        <div class="card mb-4 p-4 custom-card-small">
+            <div class="d-flex align-items-center mb-4">
+                <div class="step-number">1</div>
+                <h4 class="ms-3">Создайте бота, укажите название</h4>
+            </div>
+            <div class="mt-5">
+                <!-- Кнопка для открытия модального окна -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Создать бота
+                </button>
+            </div>
+        </div>
+
+        <div class="card mb-4 p-3 custom-card-small">
+            <div class="row g-0 align-items-center">
+                <div class="col-auto step-number">2</div>
+                <div class="col ms-3">
+                    <h4>Добавьте информацию, которую бот должен использовать</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 p-3 custom-card-small">
+            <div class="row g-0 align-items-center">
+                <div class="col-auto step-number">3</div>
+                <div class="col ms-3">
+                    <h4>Протестируйте ответы, внесите правки</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <div class="card p-4 text-left full-width-card me-3">
+                <h4>Документация</h4>
+                <p>Рассказываем о фишках и лайфхаках работы с CustomGPT</p>
+                <a href="#" class="btn btn-outline-primary">Открыть</a>
+            </div>
+            <div class="card p-4 text-left full-width-card me-3">
+                <h4>Техническая поддержка</h4>
+                <p>Отвечаем на любые вопросы и предлагаем решения.</p>
+                <a href="#" class="btn btn-outline-primary">Написать</a>
+            </div>
+            <div class="card p-4 text-left full-width-card">
+                <h4>Бот под ключ</h4>
+                <p>Создаём ботов для любых платформ в короткие сроки.</p>
+                <a href="#" class="btn btn-outline-primary">Заказать</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /#wrapper -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form id="createBotForm">
+                    <div class="mb-3">
+                        <label for="botName" class="form-label">Название бота</label>
+                        <input type="text" class="form-control" id="botName" placeholder="Бот для салона">
+                    </div>
+                    <div class="d-flex justify-content-end gap-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Создать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Подключение Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('wrapper').classList.toggle('toggled');
+    });
+
+    // JavaScript для обработки отправки формы создания бота
+    document.getElementById('createBotForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Предотвращаем перезагрузку страницы
+        var botName = document.getElementById('botName').value;
+
+        console.log("Отправка запроса на создание бота с именем: " + botName);
+
+        // AJAX запрос на сервер
+        fetch('/projects/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name: botName })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Ответ от сервера: ", data);
+            if (data.success) {
+                alert('Бот успешно создан!');
+                // Закрыть модальное окно
+                var myModalEl = document.getElementById('myModal');
+                var modal = bootstrap.Modal.getInstance(myModalEl);
+                modal.hide();
+
+                // Перенаправление на страницу настроек бота
+                window.location.href = data.redirect_url;
+            } else {
+                alert('Ошибка при создании бота: ' + data.message);
+            }
+        })
+        .catch(error => console.error('Ошибка:', error));
+    });
+</script>
+
+</body>
+</html>

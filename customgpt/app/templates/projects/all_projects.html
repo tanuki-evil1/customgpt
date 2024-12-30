@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все проекты</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='all_projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    {% include 'sidebar.html' %}
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="flex-grow-1 p-4">
+        <div class="container mt-4">
+    <h2 class="mb-4">Все проекты</h2>
+
+    {% if bots %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Имя бота</th>
+                    <th scope="col">Тариф</th>
+                    <th scope="col">Отправлено сообщений</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bot in bots %}
+                <tr>
+                    <!-- Статус -->
+                    <td>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="statusSwitch{{ bot[0] }}" checked>
+                        </div>
+                    </td>
+
+                    <!-- Имя бота -->
+                    <td>{{ bot[1] }}</td>
+
+                    <!-- Тариф -->
+                    <td>Пробный тариф до 03.05.2024</td>
+
+                    <!-- Аудитория -->
+                    <td>10</td>
+
+                    <!-- Кнопка действий -->
+                    <!-- Кнопка действий -->
+<td>
+    <div class="dropdown">
+        <button class="btn btn-light" type="button" id="dropdownMenuButton{{ bot[0] }}" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{{ url_for('static', filename='Image/ellipsis-h.svg') }}" alt="Действия">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton{{ bot[0] }}">
+            <li>
+               <a class="dropdown-item" href="{{ url_for('projects.setting_bot', bot_id=bot[0]) }}">
+                    <img src="{{ url_for('static', filename='Image/pen.svg') }}" alt="Редактировать" style="width: 16px; height: 16px; margin-right: 8px;">
+                    Редактировать
+                </a>
+            </li>
+            <li>
+    <a class="dropdown-item text-danger" href="#" onclick="setBotIdToDelete({{ bot[0] }})" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+        <img src="{{ url_for('static', filename='Image/trash-alt.svg') }}" alt="Удалить" style="width: 16px; height: 16px; margin-right: 8px;">
+        Удалить
+    </a>
+</li>
+        </ul>
+    </div>
+</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>У вас пока нет ботов. Создайте первого!</p>
+    {% endif %}
+</div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+
+<!-- Модальное окно для подтверждения удаления -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Подтвердите удаление</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Вы уверены, что хотите удалить этого бота? Это действие необратимо.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteButton">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Подключение Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('wrapper').classList.toggle('toggled');
+    });
+</script>
+
+<script>
+      var botIdToDelete = null;
+
+    // Функция для установки ID бота, которого нужно удалить
+    function setBotIdToDelete(botId) {
+        botIdToDelete = botId;
+    }
+
+    // Когда пользователь нажимает кнопку подтверждения удаления
+    document.getElementById('confirmDeleteButton').addEventListener('click', function () {
+        if (botIdToDelete) {
+            // Перенаправляем пользователя для удаления бота
+            window.location.href = '/projects/delete_bot/' + botIdToDelete;
+        }
+    });
+</script>
+
+</body>
+</html>

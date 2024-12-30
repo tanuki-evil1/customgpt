@@ -1,0 +1,1130 @@
+/*Общие стили для формы регистрации и авторизации*/
+
+/*Общие стили для заголовков */
+h3 {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 30px;
+    color: #3F3F3F;
+    margin-bottom: 20px;
+}
+
+.btn-custom:hover{
+background-color: #4946D1;
+color: #ffffff;
+}
+
+
+
+/* Общие стили для меток (label) */
+label, div {
+    font-family: "Roboto";
+    font-weight: 400!important;
+    font-size: 16px!important;
+    color: #3F3F3F;
+    margin-bottom: 8px!important;
+}
+
+/* Общие стили для текста внутри полей ввода (placeholder) */
+input::placeholder {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #8891AA;
+}
+
+/* Общие стили для ссылок */
+a {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #615EF0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4e4cc9;
+}
+
+/* Общие стили для кнопок */
+.btn-custom {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #615EF0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #4946d1;
+    transform: translateY(-2px);
+}
+
+/* Отступы между элементами формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стили для чекбоксов */
+.custom-checkbox {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked {
+    background-color: #615EF0;
+    border-color: #615EF0;
+}
+
+/* Отступы внутри формы */
+.card {
+    padding: 32px!important; /* Отступы сверху, снизу и по бокам */
+}
+
+/* Стили для текста ошибок */
+.text-danger {
+    color: #dc3545;
+    font-size: 0.875rem;
+}
+
+/* Контейнер формы */
+.registration-form-container {
+    width: 800px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-form-card
+{
+width:480px;
+height:auto;
+}
+
+/* Стили для формы авторизации */
+.login-form-container {
+    width: 700px !important; /* Увеличиваем ширину формы авторизации */
+    height: auto; /* Высота формы будет адаптироваться по содержимому */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-card
+{
+width:480px;
+height:auto;
+}
+
+/*Стили для страницы password_recovery_email*/
+
+/*Стили для страницы Index*/
+
+p {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    color: #3F3F3F;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: "Roboto";
+    font-weight: 500 !important;
+    font-size: 36px !important;
+    color: #3F3F3F;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-family: "Roboto";
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    color: #3F3F3F;
+    margin-bottom: 20px;
+}
+
+
+/* Стили для числовых элементов */
+.step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 24px!important; /* Изменяем размер цифр */
+    color: rgba(97, 94, 240, 1);
+    border-radius: 4px;
+    background-color: transparent;
+    border: 2px solid rgba(97, 94, 240, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    line-height: 1;
+    font-weight: 500 !important; /* Устанавливаем жирность medium */
+}
+
+/* Линия между логотипом и меню */
+.menu-divider {
+     width: 80%;
+    height: 2px;
+    background-color: #E1E3EA;
+    border: none;
+    margin: 16px auto 24px auto;
+}
+
+
+.d-flex.align-items-center {
+    align-items: center;
+}
+
+.custom-card h4,
+.custom-card-small h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+/* Стили заголовков в картах */
+.custom-card h2,
+.custom-card-small h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3F3F3F;
+    margin: 0;
+}
+
+/* Стили для контейнера шириной на всю страницу */
+.full-width-container {
+    max-width: 1280px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Стили для карт шириной на всю страницу */
+.full-width-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.custom-card-small {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Стили заголовков в картах шириной на всю страницу */
+.full-width-card h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Стили абзацев в картах шириной на всю страницу */
+.full-width-card p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #495057;
+}
+
+/* Стили кнопок в картах шириной на всю страницу */
+.full-width-card .btn {
+    align-self: flex-start;
+    background-color: #615EF0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Стили при наведении для кнопок в картах шириной на всю страницу */
+.full-width-card .btn:hover {
+    background-color: #4946d1;
+    transform: translateY(-2px);
+}
+
+/* Стили для обычного состояния кнопки */
+.btn-primary {
+    background-color: #615EF0; /* Основной цвет */
+    border-color: #615EF0; /* Цвет границы */
+    color: white; /* Цвет текста */
+    padding: 12px 24px; /* Отступы */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 4px; /* Скругленные углы */
+    transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+}
+
+/* Стили при наведении */
+.btn-primary:hover {
+    background-color: #4946d1; /* Цвет при наведении */
+    transform: translateY(-2px); /* Поднятие кнопки при наведении */
+}
+
+
+/* Стили для боковой панели */
+#sidebar-wrapper {
+   width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: width 0.3s;
+    box-shadow: none;
+}
+
+.logo
+{
+width:111px;
+height:23px;
+}
+
+/* Стили контейнера меню */
+.menu-container {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Стили заголовка боковой панели */
+.sidebar-heading {
+    height: 24px; /* Фиксируем высоту на 24px */
+    display: flex;
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: space-between;
+    padding: 0; /* Убираем любые внутренние отступы */
+    background-color: #ffffff;
+    color: #615EF0;
+}
+
+
+/* Контейнер для разделителя */
+.sidebar-heading-divider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px; /* Отступ сверху между логотипом и разделительной линией */
+
+}
+
+/* Стиль для логотипа */
+#logo-text {
+    font-weight: 600;
+    margin-left: 12px; /* Отступ сдвигает логотип на 10px правее */
+    font-size: 18px; /* При необходимости можно уменьшить или увеличить размер текста */
+}
+
+/* Кнопка меню */
+#menu-toggle {
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Центрируем иконку внутри кнопки */
+    justify-content: center;
+    height: 100%; /* Кнопка занимает всю высоту родительского контейнера */
+}
+
+#menu-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили для активного  пункта меню */
+.list-group-item.active {
+     background-color: #615EF0; /* Фон активного пункта */
+    color: #ffffff; /* Цвет текста активного пункта */
+    border-radius: 8px; /* Опционально, для закругления углов */
+}
+
+/* Меняем цвет иконки в активном состоянии */
+.list-group-item.active .icon {
+    filter: brightness(0) invert(1); /* Делаем иконку белой */
+}
+
+/* Текст активного пункта меню */
+.list-group-item.active .menu-text {
+    color: #fff; /* Белый текст */
+}
+
+/* Цвет активного элемента при наведении */
+.list-group-item.active:hover {
+    background-color: #7C79ED; /* Цвет при наведении */
+}
+
+
+/* Стили для списка навигации */
+.list-group-item {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Закругление */
+}
+
+/* Стили иконок внутри пунктов меню */
+
+
+/* Стили текста меню */
+.menu-text {
+    font-size: 16px;
+    color: #343a40;
+}
+
+/* Стили при наведении для пунктов меню */
+.list-group-item:hover {
+    background-color: #f0f0f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+/* Стили информации о пользователе в футере */
+.user-info {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.user-email {
+    font-size: 14px!important;
+    color: #888888;
+}
+
+/* Отступ между логотипом и пунктами меню */
+.sidebar-heading {
+    margin-bottom: 16px;
+}
+
+/* Позиционирование основного контента */
+#page-content-wrapper {
+    margin-left: 300px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Закругление для первого пункта меню */
+.list-group-item:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+
+/* Закругление для первого пункта меню */
+.list-group-item:first-child {
+    border-top-left-radius: 8px; /* Закругление верхнего левого угла */
+    border-top-right-radius: 8px; /* Закругление верхнего правого угла */
+}
+
+/* Закругление для последнего пункта меню */
+.list-group-item:last-child {
+    border-bottom-left-radius: 8px; /* Закругление нижнего левого угла */
+    border-bottom-right-radius: 8px; /* Закругление нижнего правого угла */
+    margin-bottom: 0; /* Убираем отступ снизу для последнего элемента */
+}
+
+/* Стили иконок внутри пунктов меню */
+.list-group-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+/* Стили текста меню */
+.menu-text {
+    font-size: 16px;
+    color: #343a40;
+}
+
+/* Стили при наведении для пунктов меню */
+.list-group-item:hover {
+    background-color: #f0f0f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили для футера боковой панели */
+.sidebar-footer {
+    margin-top: auto;
+    border-top:none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding-top: 16px; /* Отступ сверху для блока с пользователем */
+    padding-bottom: 0; /* Убираем лишний отступ снизу */
+}
+
+.user-divider
+{
+margin-top: 41vh; /* Отступ будет 20% от высоты экрана */
+
+}
+
+
+/* Стили для изображения пользователя */
+.sidebar-footer img {
+    margin-right: 12px;
+}
+
+
+/* Отступ снизу для последнего элемента меню */
+.list-group-item:last-child {
+    margin-bottom: 16px; /* Отступ перед линией */
+}
+
+/* Стили информации о пользователе в футере */
+.user-info {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.user-email {
+    font-size: 12px;
+    color: #888888;
+}
+
+/* Стили иконки выхода */
+.logout-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.logout-icon {
+    display: flex; /* Обеспечиваем правильное позиционирование внутри */
+    align-items: center; /* Выравниваем по вертикали */
+    justify-content: center; /* Центрируем иконку по горизонтали */
+    width: 24px; /* Устанавливаем ширину контейнера */
+    height: 24px; /* Устанавливаем высоту контейнера */
+}
+
+/* Стили для иконок в пунктах меню */
+.list-group-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+/* Отступ между логотипом и пунктами меню */
+.sidebar-heading {
+    margin-bottom: 16px;
+}
+
+/*Стили для страницы "Все боты"*/
+.all-bot-card
+{
+ max-width: 600px; /* Ограничиваем ширину карточки */
+    margin: 0 auto; /* Центрируем карточку */
+    border-radius: 10px; /* Закругляем углы карточки */
+    padding: 12px 20px; /* Уменьшаем внутренние отступы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* Настраиваем заголовок и контент внутри карточки */
+.all-bot-card .card-title {
+    font-size: 1.2rem; /* Размер заголовка */
+    font-weight: 500; /* Средняя жирность */
+}
+
+.all-bot-card .bot-processed p {
+    font-size: 0.9rem; /* Размер текста для обработанных сообщений */
+    margin: 0; /* Убираем отступы */
+}
+
+/* Настраиваем кнопку редактирования */
+.all-bot-card .dropdown .btn {
+    padding: 0.3rem 0.6rem; /* Уменьшаем отступы внутри кнопки */
+}
+
+
+
+/*Стили для страницы "Настройки бота"*/
+
+/* Основные стили для ползунка */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #615EF0 50%, #E1E3E6 50%);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background-color: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    background-color: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 5px;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Отступ между ползунком температуры и кнопкой "Обновить" */
+.temperature-slider {
+    margin-bottom: 40px;
+}
+
+/* Стили для чата */
+.chat-box {
+    width: 423px;
+    height: 583px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    left: 40px;
+}
+
+.chat-header {
+    background-color: #615EF0;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: start; /* Выравнивание по горизонтали (слева) */
+    height: 64px; /* Добавляем фиксированную высоту */
+
+}
+
+.chat-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    padding: 12px;
+}
+
+.chat-input {
+    background-color: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-input input[type="text"] {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-input button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили сообщения от бота */
+.bot-message {
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    color: #3F3F3F;
+    max-width: 80%;
+}
+
+/* Стили сообщения от пользователя */
+.user-message {
+    background-color: #615EF0; /* Фон сообщения */
+    border-radius: 10px; /* Скругленные углы */
+    color: #ffffff; /* Белый цвет текста */
+    max-width: 80%; /* Ограничение ширины сообщения */
+    padding: 10px; /* Отступы внутри сообщения */
+    word-wrap: break-word; /* Перенос слов, если текст длинный */
+}
+
+/* Принудительный белый цвет текста для <p> внутри user-message */
+.user-message p {
+    color: #ffffff !important;
+}
+
+/* Информационный блок */
+
+.custom-alert {
+    color: #3F3F3F;
+    border: 1px solid #8F9195; /* Добавляем обводку цвета 8F9195 */
+    background-color: transparent; /* Убираем заливку, оставляем только обводку */
+}
+
+.custom-alert-icon {
+    margin-right: 20px;
+}
+
+.custom-alert-link {
+    color: #615EF0;
+    text-decoration: none;
+}
+
+.custom-alert-link:hover {
+    text-decoration: underline;
+}
+
+/*Кнопка "Загрузить файл"*/
+
+.custom-file-upload {
+     display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.file-upload-label {
+      display: inline-block;
+    border: 2px dashed #D3D3D3;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    color: #6666FF;
+    font-size: 16px;
+    text-align: center;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+#file-upload {
+    display: none; /* Скрываем оригинальный input */
+}
+
+.file-upload-label:hover {
+    background-color: #f7f7f7; /* Изменение фона при наведении */
+}
+
+/*Стили для списка загруженных файлов*/
+
+.uploaded-files-list .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Выровнять все элементы по левому краю */
+    gap: 12px; /* Добавляем расстояние между элементами */
+}
+
+.uploaded-files-list .list-group-item .btn-link {
+    margin-left: auto; /* Разместить кнопку удаления справа */
+}
+
+/* Дополнительная проверка на то, что flex применяется */
+.bot-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.uploaded-files-list .list-group-item img {
+    width: 24px;   /* Ширина иконки */
+    height: 24px;  /* Высота иконки */
+}
+
+/* Иконка крестика удаления */
+.uploaded-files-list .list-group-item .btn-link img {
+    width: 24px;   /* Ширина иконки крестика */
+    height: 24px;  /* Высота иконки крестика */
+}
+
+/* Информационная плашка: отступы снизу */
+.custom-alert {
+    margin-bottom: 20px !important;
+}
+
+/* Кнопка загрузки файла: отступы снизу */
+.custom-file-upload {
+    margin-bottom: 20px !important;
+}
+
+/* Общее правило для всех .mb-3 элементов, чтобы установить отступ */
+.mb-3 {
+    margin-bottom: 20px !important;
+}
+
+/* Выровнять название бота с другими элементами */
+.bot-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+.bot-name-container button {
+    margin-right: 10px; /* Отступ между кнопкой и названием */
+    padding: 0; /* Убираем лишние отступы внутри кнопки */
+}
+
+.bot-name-container h2 {
+    margin: 0; /* Убираем отступы у заголовка */
+    font-size: 1.8rem; /* Подгоняем размер текста под форму */
+}
+
+/*Стили для страницы интеграции*/
+
+/* Стили для карточки интеграций */
+.integration-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 20px;
+}
+
+.integration-card:hover {
+    box-shadow: 0 8px 16px rgba(97, 94, 240, 0.2);  /* Тень с прозрачностью 20% */
+
+}
+
+
+.integration-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.integration-card h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.integration-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Стили для кнопки Подключить */
+.integration-card .btn-connect {
+    background-color: #888888; /* Цвет в неактивном состоянии */
+    color: white; /* Цвет текста */
+    font-weight: 500;
+    border-radius: 4px; /* Закругление углов 4px */
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.integration-card .btn-connect svg {
+    margin-left: 8px; /* Отступ между стрелкой и текстом */
+    width: 16px;
+    height: 16px;
+    stroke-width: 2; /* Жирная линия для стрелки */
+}
+
+/* Цвет при наведении */
+.integration-card .btn-connect:hover {
+    background-color: #4946D1; /* Цвет при наведении */
+    color: white;
+}
+
+/* Цвет в активном состоянии */
+.integration-card .btn-connect:active {
+    background-color: #615EF0; /* Цвет в активном состоянии */
+    color: white;
+}
+
+/* Цвет при наведении для активной кнопки */
+.btn-save:hover:enabled {
+    background-color: #4946D1;
+    color: white;
+}
+
+/* Цвет в активном состоянии для активной кнопки */
+.btn-save:active:enabled {
+    background-color: #615EF0;
+    color: white;
+}
+
+/* Стили для кнопки Сохранить в неактивном состоянии */
+.btn-save[disabled] {
+    background-color: #888888; /* Серый цвет для неактивной кнопки */
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Стили для модального окна */
+#myModal .modal-body {
+    padding-top: 32px; /* Отступ сверху */
+    padding-left: 20px; /* Отступ слева */
+    padding-right: 20px; /* Отступ справа */
+    padding-bottom: 32px; /* Отступ снизу */
+}
+
+/* Заголовок (расстояние между заголовком и полем ввода) */
+#myModal .form-label {
+    margin-bottom: 8px; /* Отступ между заголовком и полем ввода */
+}
+
+/* Поле ввода (расстояние между полем и кнопками) */
+#myModal .form-control {
+    margin-bottom: 32px; /* Отступ между полем ввода и кнопками */
+}
+
+/* Кнопки (расстояние между кнопками) */
+#myModal .d-flex.gap-3 {
+    gap: 32px; /* Отступ между кнопками */
+}
+
+/* Автоматический размер формы */
+#myModal .modal-dialog {
+    width: 411px; /* Ширина формы */
+    max-width: 100%; /* Окно не превышает 100% ширины экрана */
+}
+
+/*Стили для скрытия бокового меню*/
+
+/* Когда применяется класс toggled, уменьшаем ширину сайдбара и скрываем текст */
+#wrapper.toggled #sidebar-wrapper {
+    width: 80px; /* Ширина только для иконок */
+}
+
+/* Скрываем текст в меню, когда сайдбар свернут */
+#wrapper.toggled .menu-text {
+    display: none;
+}
+
+/* Центрируем иконки в свернутом меню */
+#wrapper.toggled .list-group-item .icon {
+    margin-right: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Анимация для плавного перехода */
+#wrapper.toggled .icon {
+    margin: 0 auto;
+    transition: all 0.3s;
+}
+
+/* Уменьшаем отступы внутри пунктов меню */
+#wrapper.toggled .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+/* Когда применяется класс toggled, скрываем логотип */
+#wrapper.toggled #logo-text {
+    display: none;
+}
+
+/* Скрываем имя пользователя и почту при сворачивании меню */
+#wrapper.toggled .user-info {
+    display: none;
+}
+
+/* Скрываем иконку выхода при сворачивании меню */
+#wrapper.toggled .logout-icon {
+    display: none;
+}
+
+/* Уменьшаем отступы в футере при сворачивании меню */
+#wrapper.toggled .sidebar-footer {
+    padding: 0;
+    justify-content: center; /* Центрируем футер */
+}
+
+/* Скрываем кнопку выхода */
+#wrapper.toggled .logout-icon img {
+    display: none;
+}
+
+/* Центрируем иконку пользователя в свернутом меню */
+#wrapper.toggled .sidebar-footer img {
+    margin: 0 auto;
+    display: block;
+}
+/* Центрируем иконку скрытия меню в свернутом меню */
+#wrapper.toggled #menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Основные стили для пунктов меню в свернутом состоянии */
+#wrapper.toggled .list-group-item {
+    position: relative; /* Для правильного позиционирования всплывающего текста */
+}
+
+/* При наведении отображаем текст пункта */
+#wrapper.toggled .list-group-item:hover::after {
+  content: attr(data-tooltip); /* Берем текст из атрибута data-tooltip */
+    position: absolute;
+    left: calc(100% + 10px); /* Сдвигаем на 18px вправо от иконки */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1F1F21;
+    color: white;
+    padding: 12px 18px; /* Отступы внутри tooltip: 8px сверху/снизу, 12px по бокам */
+    border-radius: 4px;
+    white-space: nowrap; /* Чтобы текст не переносился */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Показываем текст при наведении */
+#wrapper.toggled .list-group-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bot_name
+{
+color: white;
+font-size: 1.2rem;
+    line-height: 1.2; /* Уменьшаем межстрочный интервал */
+    margin: 0; /* Убираем лишние отступы */
+}
+
+/*Активная кнопка на станице интеграции*/
+
+button.btn.btn-connected:disabled {
+    background-color: #11B669 !important;  /* Переопределение фона */
+    color: #FFFFFF !important;               /* Переопределение цвета текста */
+    border-radius: 4px;                    /* Закругление углов */
+    padding: 10px 20px;                    /* Отступы */
+    font-weight: medium;                   /* Жирный текст */
+    display: inline-flex;
+    align-items: center;
+    opacity: 1 !important;                 /* Сброс opacity */
+}
+
+
+* Стиль для страницы Аналитика */
+
+div .analytic-card-1 {
+    width: 279px;
+    height: 151px;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.analytic-card-1 .card-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 24px; /* Отступ между заголовком и текстом */
+}
+
+.analytic-card-1 .card-text {
+    font-size: 24px;
+    font-weight: 700;
+}
